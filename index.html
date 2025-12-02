@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>m | link</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+    }
+    .page {
+      max-width: 480px;
+      width: 100%;
+      padding: 32px 16px 48px;
+      text-align: center;
+    }
+    .avatar-wrap { margin-bottom: 12px; }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+      border: 4px solid #ff66aa;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    .name { font-size: 22px; font-weight: 700; margin-top: 8px; }
+    .id { font-size: 14px; opacity: .8; margin-top: 2px; }
+
+    .desc {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 16px 0 24px;
+      opacity: .9;
+    }
+
+    .thumb-link {
+      position: relative;
+      display: block;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.8);
+    }
+    .thumb-link img {
+      width: 100%;
+      display: block;
+    }
+
+    .play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .play::before {
+      content: "";
+      margin-left: 4px;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 22px solid #fff;
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 12px;
+      opacity: .6;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="avatar-wrap">
+    <div class="avatar">
+      <!-- Xのアイコン画像 -->
+      <img src="icon.jpg" alt="icon">
+    </div>
+    <div class="name">m</div>
+    <div class="id">@m__sabu2</div>
+  </div>
+
+  <p class="desc">
+    画像タップで続き見れるかも…？
+  </p>
+
+  <!-- ここをタップしたら飛ばしたい先へ -->
+  <a class="thumb-link"
+     href="ここに飛ばしたいURLを入れる"
+     target="_blank" rel="noopener">
+    <img src="thumb.jpg" alt="thumbnail">
+    <div class="play"></div>
+  </a>
+
+  <div class="footer">
+    made with GitHub Pages
+  </div>
+</div>
+</body>
+</html>
